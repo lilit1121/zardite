@@ -3,16 +3,15 @@
     <div class="home flex">
       <div class="home-content text-center">
         <img src="../assets/images/home/home-z.svg" alt="icon-z" class="mb-22" />
-        <h1 class="title text-light-gray mb-22">
-          Wish to meet
-          <span class="text-primary text-italic text-semibold">cool amazing gamers</span> online? Join us! It’s free.
+        <h1 class="title text-light-gray">
+          The comfort of finding cool amazing people at your fingertips
         </h1>
         <div class="mb-22">
-          <img src="../assets/download-now.svg" alt="download" />
+          <img src="../assets/DownloadNow.svg" alt="download" width="498" />
         </div>
         <div>
-          <img src="../assets/icons/app-store.svg" alt="app-store" class="mx-12" />
-          <img src="../assets/icons/google-play.svg" alt="google-play" class="mx-12" />
+          <img src="../assets/icons/app-store.svg" alt="app-store" class="mx-12" width="235" />
+          <img src="../assets/icons/google-play.svg" alt="google-play" class="mx-12" width="235" />
         </div>
       </div>
     </div>
@@ -117,11 +116,18 @@ export default {
 <style scoped>
 /* home */
 .home {
-  background: url("../assets/images/home/home-bg.svg") no-repeat;
+  background: url("../assets/images/home/home-bg-2.svg") no-repeat  center center;
+  /*background-size: 100% 100%;*/
   background-size: cover;
+  /*background-position: center center*/
+  background-clip: content-box;
+  /*background-size: cover;*/
   width: 100%;
   height: calc(100vh - 106px);
   align-items: center;
+}
+.home .title {
+  margin: 21px 0 82px;
 }
 .home-content {
   width: 100%;

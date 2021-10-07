@@ -84,6 +84,9 @@ ul {
   display: flex;
   justify-content: center;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 img {
   max-width: 100%;
   height: auto;

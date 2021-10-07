@@ -3,7 +3,9 @@
     <header class="header wrapper">
       <nav class="flex-center-between">
         <div>
-          <img src="../assets/logo1.svg" alt="logo" class="header-logo" />
+          <router-link to="/">
+            <img src="../assets/logo1.svg" alt="logo" class="header-logo" />
+          </router-link>
         </div>
         <ul class="menu flex menu-md-none">
           <li class="menu__item">
@@ -59,7 +61,9 @@ export default {
   transition-property: opacity;
   transition-duration: .25s;
 }
-
+.bg-transparent {
+  background-color: transparent;
+}
 .fade-enter-active {
   transition-delay: .25s;
 }

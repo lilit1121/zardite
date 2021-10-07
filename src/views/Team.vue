@@ -1,5 +1,5 @@
 <template>
-  <div class="team">
+  <div class="team bg-gray">
     <div class="team-top-block w-50 text-center">
       <h1 class="title text-bold text-primary">We Are Zardite</h1>
       <img src="../assets/divider.svg" alt="divider" />
@@ -8,7 +8,7 @@
         a vision to connect as many people as possible through social gaming.
       </p>
     </div>
-    <div class="team-member flex-start-center flex-sm-column mb-115">
+    <div class="team-member flex-start-center flex-md-column flex-wrap mb-115">
       <div class="team-member__block">
         <img src="../assets/images/team/team-member1.svg" alt="team-member" />
         <p class="team-member__name">Eugene Joseph</p>
@@ -25,7 +25,7 @@
         <span class="team-member__profession">CSO/Cheif Strategic Officer</span>
       </div>
     </div>
-    <div class="team-member flex-start-center flex-sm-column mb-124">
+    <div class="team-member flex-start-center flex-md-column flex-wrap mb-124">
       <div class="team-member__block">
         <img src="../assets/images/team/team-member4.svg" alt="team-member" />
         <p class="team-member__name">Lasha Abazashvili</p>
@@ -51,7 +51,7 @@
       <p class="us-at-glance text-center text-bold text-italic">Us at a glance</p>
       <img src="../assets/large-divider.svg" alt="divider" width="100%" />
     </div>
-    <div class="about-team flex-start-between pt-124 flex-sm-column">
+    <div class="about-team flex-start-between pt-124 flex-md-column">
       <div>
         <div class="team-member">
           <div class="team-member__block left">
@@ -65,7 +65,6 @@
         </div>
       </div>
       <div class="message">
-        <img src="../assets/info-right-bg.png" alt="" width="691" />
         <p class="message__content">
           Eugene is the creator and founder of Zardite. Originally from a finance background and applying
           his skills in playing the market, he decided to transition to a different kind of gaming. Eugene
@@ -73,9 +72,8 @@
         </p>
       </div>
     </div>
-    <div class="about-team flex-start-between flex-sm-column">
+    <div class="about-team flex-start-between flex-md-column-reverse">
       <div class="message">
-        <img src="../assets/info-left-svg.png" alt="" width="691" />
         <p class="message__content">
           With a passion for gaming and technology, there was no question Dimitri wouldn't have taken up the
           opportunity to lead Zardite's technical vision.Previously, he led multidisciplinary teams at high
@@ -97,7 +95,7 @@
         </div>
       </div>
     </div>
-    <div class="about-team flex-start-between flex-sm-column">
+    <div class="about-team flex-start-between flex-md-column">
       <div>
         <div class="team-member">
           <div class="team-member__block left">
@@ -111,7 +109,6 @@
         </div>
       </div>
       <div class="message">
-        <img src="../assets/info-right-bg.png" alt="" width="691" />
         <p class="message__content">
           Tamara is a seasoned digital transformation professional with over 10 years of experience in
           strategy design and implementation from data driven environments, developing and implementing
@@ -121,9 +118,8 @@
         </p>
       </div>
     </div>
-    <div class="about-team flex-start-between flex-sm-column">
+    <div class="about-team flex-start-between flex-md-column-reverse">
       <div class="message">
-        <img src="../assets/info-left-svg.png" alt="" width="691" />
         <p class="message__content">
           Brainstorming ideas and and making calculated design decisions is Shubham’s cup of joe. Shubham is a
           Digital Graphic Designer with over 6 years of experience in design who has designed successful design
@@ -145,7 +141,7 @@
         </div>
       </div>
     </div>
-    <div class="about-team flex-start-between flex-sm-column">
+    <div class="about-team flex-start-between flex-md-column">
       <div>
         <div class="team-member">
           <div class="team-member__block left">
@@ -159,7 +155,6 @@
         </div>
       </div>
       <div class="message">
-        <img src="../assets/info-right-bg.png" alt="" width="691" />
         <p class="message__content">
           Mobile Application Developer (React-Native, Android, iOS)Parin started out as a Web Developer,
           then realized that he’s way more passionate about mobile development. He plays video games , loads of
@@ -167,9 +162,8 @@
         </p>
       </div>
     </div>
-    <div class="about-team flex-start-between flex-sm-column">
+    <div class="about-team flex-start-between flex-md-column-reverse">
       <div class="message">
-        <img src="../assets/info-left-svg.png" alt="" width="691" />
         <p class="message__content">
           Mobile Engineer who’s been developing mobile applications for 4+years now.
           He started out as a front end web developer before moving to mobile applications .
@@ -190,7 +184,7 @@
         </div>
       </div>
     </div>
-    <div class="about-team flex-start-between flex-sm-column">
+    <div class="about-team flex-start-between flex-md-column">
       <div>
         <div class="team-member">
           <div class="team-member__block left">
@@ -204,7 +198,6 @@
         </div>
       </div>
       <div class="message">
-        <img src="../assets/info-right-bg.png" alt="" width="691" />
         <p class="message__content">
           Lasha is Back-end developer who is super passionate about
           his job and craft - so much so, that even on his free time,
@@ -227,7 +220,6 @@ name: "Team"
 
 <style scoped>
 .team {
-  background: #f3f3f3;
   padding-top: 85px;
 }
 .team-top-block  {
@@ -307,13 +299,52 @@ name: "Team"
   left: 80%;
 }
 .message {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: flex-end;*/
+  /*position: relative;*/
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px 33.15px 47.6px -30.6px rgba(255, 255, 255, 0.5), inset 0px 5.95px 9.35px -3.4px #FFFFFF, inset 0px -69.7px 57.8px -54.4px rgba(96, 68, 145, 0.3), inset 0px 83.3px 85px -40.8px rgba(202, 172, 255, 0.3), inset 0px 3.4px 15.3px rgba(154, 146, 210, 0.3), inset 0px 0.85px 34px rgba(227, 222, 255, 0.2);
+  /*backdrop-filter: blur(85px);*/
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 102px 102px 102px 102.002px;
   position: relative;
+  /*transform: matrix(0, -1, -1, 0, 0, 0);*/
 }
-.message__content {
+.message:after {
+  content: '';
+  width: 110px;
+  height: 140px;
+  display: block;
+  /*background: rgba(196, 196, 196, 0.01);*/
+  /*box-shadow: inset 0px 33.15px 47.6px -30.6px rgba(255, 255, 255, 0.5), inset 0px 5.95px 9.35px -3.4px #FFFFFF, inset 0px -69.7px 57.8px -54.4px rgba(96, 68, 145, 0.3), inset 0px 83.3px 85px -40.8px rgba(202, 172, 255, 0.3), inset 0px 3.4px 15.3px rgba(154, 146, 210, 0.3), inset 0px 0.85px 34px rgba(227, 222, 255, 0.2);*/
   position: absolute;
+  bottom: -87px;
+  left: 60px;
+
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px 33.15px 47.6px rgba(255, 255, 255, 0.5), inset 0px 5.95px 9.35px #FFFFFF, inset 0px -69.7px 57.8px rgba(96, 68, 145, 0.3), inset 0px 83.3px 85px rgba(202, 172, 255, 0.3), inset 0px 3.4px 15.3px rgba(154, 146, 210, 0.3), inset 0px 0.85px 34px rgba(227, 222, 255, 0.2);
+  backdrop-filter: blur(85px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 12px;
+  clip-path: polygon(10% 0, 0% 100%, 100% 0);
+}
+/*.message:after {*/
+/*  content: '';*/
+/*  width: 110.5px;*/
+/*  height: 140.5px;*/
+/*  background: rgba(196, 196, 196, 0.01);*/
+/*  box-shadow: inset 0px 33px 48px rgba(255, 255, 255, 0.5), inset 0 6px 9.35px #FFFFFF, inset 0px -69.7px 57.8px rgba(96, 68, 145, 0.3), inset 0px 83.3px 85px rgba(202, 172, 255, 0.3), inset 0px 3.4px 15.3px rgba(154, 146, 210, 0.3), inset 0px 0.85px 34px rgba(227, 222, 255, 0.2);*/
+/*  backdrop-filter: blur(85px);*/
+/*  !* Note: backdrop-filter has minimal browser support *!*/
+
+/*  border-radius: 12px;*/
+/*  !*transform: matrix(-1, 0, 0, 1, 0, 0);*!*/
+/*}*/
+.message__content {
+  /*position: absolute;*/
   padding: 65px 67px;
   font-weight: 500;
   font-size: 20px;
@@ -331,6 +362,21 @@ name: "Team"
   left: inherit;
   right: 59%;
   padding: 50px;
+}
+
+@media (max-width: 1500px) {
+  .about-team {
+    padding: 0  35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-team > div {
+    width: 100%;
+  }
+  .about-team {
+    padding-bottom: 30px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -354,12 +400,6 @@ name: "Team"
   }
   .team-member.mb-124 {
     padding-bottom: 25px;
-  }
-  .about-team {
-    padding: 0 20px;
-  }
-  .about-team > div {
-    width: 100%;
   }
   .message__content {
     padding: 46px 32px;
