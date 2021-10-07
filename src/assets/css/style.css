@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat",serif;
+}
+.wrapper  {
+  width: 100%;
+  /*max-width: 1740px;*/
+  margin: auto;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bg-gray {
+  background: #E5E5E5;
+}
+.bg-primary {
+  background-color: #6E5CD9;
+}
+.bg-secondary {
+  background-color: #C7CFDE;
+}
+.text-light-gray {
+  color: #D6D6D6;
+}
+.text-primary {
+  color: #6E5CD9;
+}
+.text-italic {
+  font-style: italic;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}
+.mr-24 {
+  margin-right: 24px;
+}
+.mb-22 {
+  margin-bottom: 22px;
+}
+.mx-12 {
+  margin: 0 12px;
+}
+.mt-124 {
+  margin-top: 124px;
+}
+.pt-124 {
+  padding-top: 124px;
+}
+.mb-115 {
+  margin-bottom: 115px;
+}
+.mb-124 {
+  padding-bottom: 124px;
+}
+.w-50 {
+  width: 50%;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 50px;
+}
+.flex {
+  display: flex;
+}
+.flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-start-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.flex-start-center {
+  display: flex;
+  justify-content: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 320px) {
+  .wrapper  {
+    max-width: inherit;
+    /*padding: 0 30px;*/
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper  {
+    max-width: 1400px;
+    /*padding: 0 30px;*/
+  }
+}
+@media (min-width: 1600px) {
+  .wrapper  {
+    max-width: 1700px;
+  }
+}
+@media (min-width: 1920px) {
+  .wrapper  {
+    max-width: 1740px;
+  }
+}
+@media (max-width: 1600px) {
+  .title {
+    font-size: 43px;
+  }
+}
+@media (max-width: 1430px) {
+  .wrapper  {
+    padding: 0 35px;
+  }
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 992px) {
+  .wrapper  {
+    padding: 0 20px;
+  }
+  .title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .flex-md-column {
+    flex-direction: column;
+  }
+  .flex-md-column-reverse {
+    flex-direction: column-reverse;
+  }
+  .mb-md-25 {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .flex-sm-column {
+    flex-direction: column;
+  }
+  .flex-sm-column-reverse {
+    flex-direction: column-reverse;
+  }
+  .w-50 {
+    width: 100%;
+  }
+  .mb-sm-25 {
+    margin-bottom: 25px;
+  }
+}
+
+
