@@ -74,7 +74,7 @@
     </div>
     <div class="about-team flex-start-between flex-md-column-reverse">
       <div class="message">
-        <p class="message__content">
+        <p class="message__content box">
           With a passion for gaming and technology, there was no question Dimitri wouldn't have taken up the
           opportunity to lead Zardite's technical vision.Previously, he led multidisciplinary teams at high
           profile technology companies including IBM, Vonage & Aristocrat. Dimitri's hobbies include military LARP,
@@ -299,52 +299,12 @@ name: "Team"
   left: 80%;
 }
 .message {
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*align-items: flex-end;*/
-  /*position: relative;*/
   background: rgba(196, 196, 196, 0.01);
   box-shadow: inset 0px 33.15px 47.6px -30.6px rgba(255, 255, 255, 0.5), inset 0px 5.95px 9.35px -3.4px #FFFFFF, inset 0px -69.7px 57.8px -54.4px rgba(96, 68, 145, 0.3), inset 0px 83.3px 85px -40.8px rgba(202, 172, 255, 0.3), inset 0px 3.4px 15.3px rgba(154, 146, 210, 0.3), inset 0px 0.85px 34px rgba(227, 222, 255, 0.2);
-  /*backdrop-filter: blur(85px);*/
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 102px 102px 102px 102.002px;
+  border-radius: 102px;
   position: relative;
-  /*transform: matrix(0, -1, -1, 0, 0, 0);*/
 }
-.message:after {
-  content: '';
-  width: 110px;
-  height: 140px;
-  display: block;
-  /*background: rgba(196, 196, 196, 0.01);*/
-  /*box-shadow: inset 0px 33.15px 47.6px -30.6px rgba(255, 255, 255, 0.5), inset 0px 5.95px 9.35px -3.4px #FFFFFF, inset 0px -69.7px 57.8px -54.4px rgba(96, 68, 145, 0.3), inset 0px 83.3px 85px -40.8px rgba(202, 172, 255, 0.3), inset 0px 3.4px 15.3px rgba(154, 146, 210, 0.3), inset 0px 0.85px 34px rgba(227, 222, 255, 0.2);*/
-  position: absolute;
-  bottom: -87px;
-  left: 60px;
-
-  background: rgba(196, 196, 196, 0.01);
-  box-shadow: inset 0px 33.15px 47.6px rgba(255, 255, 255, 0.5), inset 0px 5.95px 9.35px #FFFFFF, inset 0px -69.7px 57.8px rgba(96, 68, 145, 0.3), inset 0px 83.3px 85px rgba(202, 172, 255, 0.3), inset 0px 3.4px 15.3px rgba(154, 146, 210, 0.3), inset 0px 0.85px 34px rgba(227, 222, 255, 0.2);
-  backdrop-filter: blur(85px);
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 12px;
-  clip-path: polygon(10% 0, 0% 100%, 100% 0);
-}
-/*.message:after {*/
-/*  content: '';*/
-/*  width: 110.5px;*/
-/*  height: 140.5px;*/
-/*  background: rgba(196, 196, 196, 0.01);*/
-/*  box-shadow: inset 0px 33px 48px rgba(255, 255, 255, 0.5), inset 0 6px 9.35px #FFFFFF, inset 0px -69.7px 57.8px rgba(96, 68, 145, 0.3), inset 0px 83.3px 85px rgba(202, 172, 255, 0.3), inset 0px 3.4px 15.3px rgba(154, 146, 210, 0.3), inset 0px 0.85px 34px rgba(227, 222, 255, 0.2);*/
-/*  backdrop-filter: blur(85px);*/
-/*  !* Note: backdrop-filter has minimal browser support *!*/
-
-/*  border-radius: 12px;*/
-/*  !*transform: matrix(-1, 0, 0, 1, 0, 0);*!*/
-/*}*/
 .message__content {
-  /*position: absolute;*/
   padding: 65px 67px;
   font-weight: 500;
   font-size: 20px;
@@ -366,16 +326,46 @@ name: "Team"
 
 @media (max-width: 1500px) {
   .about-team {
-    padding: 0  35px;
+    padding: 50px 35px 0;
+  }
+  .team-top-block.w-50 {
+    width: 70%;
+  }
+  .about-team .team-member__block img {
+    max-width: 350px;
+  }
+  .about-team .team-member__info {
+    max-width: 300px!important;
   }
 }
-
+@media (max-width: 992px) {
+  .team-info {
+    font-size: 24px;
+  }
+}
 @media (max-width: 768px) {
   .about-team > div {
     width: 100%;
   }
   .about-team {
     padding-bottom: 30px;
+  }
+  .team-member__block {
+    margin-bottom: 25px;
+  }
+  .team-top-block {
+    padding-bottom: 50px;
+  }
+  .team-member.mb-124 {
+    padding-bottom: 25px;
+  }
+  .team-member.mb-115 {
+    margin-bottom: 0;
+  }
+  .about-team .right-block .team-member__info {
+    left: 65%;
+    right: inherit;
+    top: 5%;
   }
 }
 
@@ -384,42 +374,48 @@ name: "Team"
     padding-top: 50px;
   }
   .team-info {
-    font-size: 22px;
-  }
-  .team-top-block {
-    padding-bottom: 50px;
-  }
-  .team-member__block {
-    margin-bottom: 25px;
+    font-size: 18px;
   }
   .team-member__name {
     margin-top: 16px;
   }
-  .team-member.mb-115 {
-    margin-bottom: 0;
-  }
-  .team-member.mb-124 {
-    padding-bottom: 25px;
-  }
   .message__content {
-    padding: 46px 32px;
+    padding: 30px 25px;
     font-size: 16px;
   }
+  .about-team .team-member__block {
+    text-align: start;
+  }
+  .about-team {
+    padding: 30px 20px;
+  }
   .about-team .team-member__block img {
-    max-width: 300px;
+    max-width: 180px;
   }
   .about-team .team-member__name {
     font-size: 30px;
-    margin-top: 16px;
+    line-height: inherit;
+    margin-top: 5px;
   }
   .about-team .team-member__profession {
     font-size: 20px;
   }
   .about-team .team-member__info {
-    max-width: 300px;
-    font-size: 26px;
-    padding-right: 75px;
-    left: 72%;
+    max-width: 165px!important;
+    font-size: 18px;
+    line-height: 24px;
+    left: 48%;
+    top: 20px;
+  }
+  .about-team .right-block .team-member__info {
+    padding: 0;
+    left: 48%;
+    right: inherit;
+    top: 20px;
+  }
+  .message {
+    border-radius: 50px;
+    margin-bottom: 25px;
   }
 }
 </style>

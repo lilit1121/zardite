@@ -7,17 +7,21 @@
           The comfort of finding cool amazing people at your fingertips
         </h1>
         <div class="mb-22">
-          <img src="../assets/DownloadNow.svg" alt="download" width="498" />
+          <img src="../assets/DownloadNow.svg" alt="download" width="498" class="download-now" />
         </div>
         <div>
-          <img src="../assets/icons/app-store.svg" alt="app-store" class="mx-12" width="235" />
-          <img src="../assets/icons/google-play.svg" alt="google-play" class="mx-12" width="235" />
+          <img src="../assets/icons/app-store.svg" alt="app-store" class="mx-12 app-store" width="235" />
+          <img src="../assets/icons/google-play.svg" alt="google-play" class="mx-12 google-play" width="235" />
         </div>
       </div>
     </div>
     <div class="about bg-gray">
       <div class="about-content text-center">
-        <h2 class="title text-primary text-bold text-italic">We are a social gaming company</h2>
+        <div class="flex-start-center">
+          <img src="../assets/images/left-line.svg" alt="line" />
+          <h2 class="title text-primary text-bold text-italic">We are a social gaming company</h2>
+          <img src="../assets/images/right-line.svg" alt="line" />
+        </div>
         <p class="about-content__info">
           Zardite aims to facilitate the evolution of gaming & social gaming - both industry and community.
           Our core values in everything we believe in and who we are;- Inclusivity, Diversity and Sincerity in
@@ -117,13 +121,10 @@ export default {
 /* home */
 .home {
   background: url("../assets/images/home/home-bg-2.svg") no-repeat  center center;
-  /*background-size: 100% 100%;*/
   background-size: cover;
-  /*background-position: center center*/
   background-clip: content-box;
-  /*background-size: cover;*/
   width: 100%;
-  height: calc(100vh - 106px);
+  height: 100vh;
   align-items: center;
 }
 .home .title {
@@ -134,23 +135,29 @@ export default {
   max-width: 1090px;
   margin: 0 auto;
 }
+.download-now {
+  margin: 0 25px;
+}
 /* about */
 .about  {
   padding: 126px 0;
 }
 .about-content  {
-  max-width: 1000px;
+  max-width: 1100px;
   width: 100%;
   margin: auto;
+}
+.about-content .title {
+  font-weight: 700;
+  margin: 0 20px;
 }
 .about-content__info {
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: #9E9E9E;
-  margin: 30px 55px 0;
+  margin: 30px 105px 0;
 }
-
 /* our vision */
 .about-block {
   padding: 99px 0 153px;
@@ -203,7 +210,6 @@ export default {
 .more-info__content:last-child {
   margin-bottom: 0;
 }
-
 /* sign up */
 .sign-up {
   background: url("../assets/sign-up-bg.svg") no-repeat center center;
@@ -261,9 +267,6 @@ export default {
 }
 
 @media (max-width: 1600px) {
-  .home {
-    height: calc(100vh - 90px);
-  }
   .about-block p {
     margin: 92px 100px 0;
   }
@@ -281,9 +284,6 @@ export default {
   }
 }
 @media (max-width: 1430px) {
-  .home-content {
-    padding: 0 30px;
-  }
   .about-block__title {
     font-size: 40px;
   }
@@ -300,14 +300,23 @@ export default {
   }
 }
 @media (max-width: 992px) {
+  .home .title {
+    margin: 21px 25px 60px;
+  }
   .about-block p {
     margin: 40px;
   }
   .more-info__content-title {
     font-size: 35px;
   }
+  .about-content {
+    padding: 0 20px;
+  }
 }
 @media (max-width: 768px) {
+  .about-content img {
+    max-width: 70px;
+  }
   .about-block.w-50 {
     width: 100%;
   }
@@ -315,8 +324,20 @@ export default {
     max-width: 85%;
   }
 }
-
 @media (max-width: 600px) {
+  .home-content > img {
+    max-width: 80px;
+  }
+  .home .title {
+    margin: 0 0 40px;
+  }
+  .download-now  {
+    max-width: 250px;
+  }
+  .app-store,
+  .google-play {
+    max-width: 150px;
+  }
   .about {
     padding: 50px 20px;
   }
@@ -324,7 +345,7 @@ export default {
     margin: 20px 0 0;
     font-size: 20px;
   }
-  .about-block[data-v-fae5bece] {
+  .about-block {
     padding: 50px 20px;
   }
   .more-info__content-right-block {
@@ -339,7 +360,7 @@ export default {
   }
   .more-info__content-title,
   .about-block__title {
-    font-size: 32px;
+    font-size: 28px;
   }
   .more-info__top-block {
     margin-bottom: 26px;

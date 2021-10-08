@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar :show-transparent-navbar="$route.path==='/'" />
     <router-view/>
     <Footer />
   </div>

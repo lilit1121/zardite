@@ -1,13 +1,16 @@
 <template>
-  <div class="bg-gray">
+  <div :class="!showTransparentNavbar ? 'bg-gray' : 'main-navbar'">
     <header class="header wrapper">
       <nav class="flex-center-between">
         <div>
-          <router-link to="/">
+          <router-link to="/" v-if="!showTransparentNavbar">
             <img src="../assets/logo1.svg" alt="logo" class="header-logo" />
           </router-link>
+          <router-link to="/" v-else  @click="showMobileMenu = !showMobileMenu">
+            <img src="../assets/images/logo-white.svg" alt="logo" class="header-logo" />
+          </router-link>
         </div>
-        <ul class="menu flex menu-md-none">
+        <ul class="menu flex menu-md-none" :class="showTransparentNavbar ? 'menu-white-color' : ''">
           <li class="menu__item">
             <router-link to="/downloads">Downloads</router-link>
           </li>
@@ -21,12 +24,18 @@
             <router-link to="/investors">Investors</router-link>
           </li>
         </ul>
-        <div class="menu-icon" @click="showMobileMenu = !showMobileMenu">
+        <div v-if="!showTransparentNavbar" class="menu-icon" @click="showMobileMenu = !showMobileMenu">
           <img src="../assets/menu.png" alt="menu-icon" width="40" />
         </div>
-        <transition name="fade">
-          <ul class="menu flex" v-if="showMobileMenu" :class="showMobileMenu ? 'show-mobile-menu' : ''">
-            <li class="menu__item" @click="showMobileMenu = !showMobileMenu">
+        <div v-else class="menu-icon" @click="showMobileMenu = !showMobileMenu">
+          <img src="../assets/menu-white-icon.svg" alt="menu-icon" width="40" />
+        </div>
+        <transition name="slide">
+          <ul
+              class="menu flex"
+              v-if="showMobileMenu" @click="showMobileMenu = !showMobileMenu" :class="showMobileMenu ? 'show-mobile-menu flex-center-center' : ''"
+          >
+            <li class="menu__item">
               <router-link to="/downloads">Downloads</router-link>
             </li>
             <li class="menu__item">
@@ -52,43 +61,47 @@ export default {
     return {
       showMobileMenu: false,
     }
+  },
+  props: {
+    showTransparentNavbar: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 </script>
 
 <style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition-property: opacity;
-  transition-duration: .25s;
-}
-.bg-transparent {
-  background-color: transparent;
-}
-.fade-enter-active {
-  transition-delay: .25s;
-}
-
-.fade-enter, .fade-leave-active {
-  opacity: 0
-}
 .header {
   position: relative;
   padding-top: 25px;
   padding-bottom: 25px;
 }
 .show-mobile-menu {
+  background-image: radial-gradient(circle, #e5e5e5, #d4ceeb, #c6b5f0, #b99cf2, #af82f2);
   position: absolute;
-  width: 100%;
-  background-color: bisque;
-  display: block;
-  /*height: calc(35vh - 106px);*/
   top: 95px;
   left: 0;
-  padding: 10px 0;
-  transition: 2s all ease;
+  width: 100%;
+  height: calc(100vh - 74px);
+  padding: 0;
 }
 .show-mobile-menu .menu__item {
   padding: 10px 20px;
+}
+.slide-enter-active {
+  transition-duration: 0.4s;
+}
+.slide-leave-active {
+  transition-duration: 0.4s;
+}
+.slide-enter-to, .slide-leave {
+  max-height: 100vh;
+  overflow: hidden;
+}
+.slide-enter, .slide-leave-to {
+  overflow: hidden;
+  max-height: 1px;
 }
 .menu__item {
   padding: 0 24px;
@@ -99,6 +112,14 @@ export default {
 .menu__item a {
   color: #323232;
   text-decoration: none;
+}
+.main-navbar {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+}
+.menu-white-color .menu__item a {
+  color: #F1F1F1;
 }
 .menu-icon {
   display: none;

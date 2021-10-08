@@ -25,6 +25,11 @@ export default new Router({
           path: '/team',
           name: 'team',
           component: () => import(/* webpackChunkName: "team" */ './views/Team')
+      },
+      {
+          path: '/ecosystem',
+          name: 'ecosystem',
+          component: () => import(/* webpackChunkName: "team" */ './views/Ecosystem')
       }
   ]
 })

@@ -75,6 +75,12 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
+.flex-center-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .flex-start-between {
   display: flex;
   align-items: flex-start;
@@ -146,6 +152,9 @@ img {
   }
 }
 @media (max-width: 600px) {
+  .title {
+    font-size: 28px;
+  }
   .flex-sm-column {
     flex-direction: column;
   }
