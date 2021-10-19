@@ -485,7 +485,7 @@ button {
   font-weight: bold;
   font-size: 25px;
   border-radius: 50px;
-  cursor: pointer;
+  c
 }
 @media (max-width: 1500px) {
   .item-desc {
