@@ -232,7 +232,7 @@ export default {
   margin-bottom: 89px;
 }
 .inv-main-img img{
-  border-radius: 65px;
+  border
 }
 .name-des-investor {
   display: flex;

@@ -227,12 +227,9 @@ export default {
   margin: 56px auto 45px;
 }
 .inv-main-img {
-  border-radius: 65px;
+  border
   text-align: center;
   margin-bottom: 89px;
-}
-.inv-main-img img{
-  border-radius: 65px;
 }
 .name-des-investor {
   display: flex;

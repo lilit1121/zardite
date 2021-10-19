@@ -1,36 +1,17 @@
 <template>
-  <div
-    :class="{
-      'bg-gray': !showTransparentNavbar,
-      'main-navbar': showTransparentNavbar,
-      'pos-fix-nav': showMobileMenu,
-    }"
-  >
-    <header class="header wrapper">
-      <nav class="flex-center-between">
-        <div @click="showMobileMenu = false">
+  <div :class="{'bg-gray' : !showTransparentNavbar,'pos-fix-nav':showMobileMenu}" >
+    <header class="header wrapper" >
+      <nav class="flex-center-between" >
+        <div>
           <router-link to="/" v-if="!showTransparentNavbar">
-            <img src="../assets/logo1.svg" alt="logo" class="header-logo" />
+            <img v-if="!showMobileMenu" src="../assets/logo1.svg" alt="logo" class="header-logo" />
+            <img v-if="!showMobileMenu" src="../assets/logo1.svg" alt="logo" class="header-logo" />
           </router-link>
-          <router-link to="/" v-else>
-            <img
-              v-if="showMobileMenu"
-              src="../assets/logo1.svg"
-              alt="logo"
-              class="header-logo"
-            />
-            <img
-              v-if="!showMobileMenu"
-              src="../assets/images/logo-white.svg"
-              alt="logo"
-              class="header-logo"
-            />
+          <router-link to="/" v-else  @click="showMobileMenu = !showMobileMenu">
+            <img src="../assets/images/logo-white.svg" alt="logo" class="header-logo" />
           </router-link>
         </div>
-        <ul
-          class="menu flex menu-md-none"
-          :class="showTransparentNavbar ? 'menu-white-color' : ''"
-        >
+        <ul class="menu flex menu-md-none" :class="showTransparentNavbar ? 'menu-white-color' : ''">
           <li class="menu__item">
             <router-link to="/404">Downloads</router-link>
           </li>
@@ -44,45 +25,28 @@
             <router-link to="/investors">Investors</router-link>
           </li>
         </ul>
-        <div
-          v-if="!showTransparentNavbar"
-          class="menu-icon"
-          @click="showMobileMenu = !showMobileMenu"
-        >
+        <div v-if="!showTransparentNavbar" class="menu-icon" @click="showMobileMenu = !showMobileMenu">
           <img src="../assets/menu.png" alt="menu-icon" width="40" />
         </div>
         <div v-else class="menu-icon" @click="showMobileMenu = !showMobileMenu">
-          <img
-            v-if="!showMobileMenu"
-            src="../assets/menu-white-icon.svg"
-            alt="menu-icon"
-            width="40"
-          />
-          <img
-            v-if="showMobileMenu"
-            src="../assets/menu.png"
-            alt="menu-icon"
-            width="40"
-          />
+          <img src="../assets/menu-white-icon.svg" alt="menu-icon" width="40" />
         </div>
         <transition name="slide">
           <ul
-            class="menu flex"
-            v-if="showMobileMenu"
-            :class="{
-              'show-mobile-menu flex-center-center pos-fix': showMobileMenu,
-            }"
+          
+              class="menu flex"
+              v-if="showMobileMenu" @click="showMobileMenu = !showMobileMenu" :class="{ 'show-mobile-menu flex-center-center pos-fix' : showMobileMenu}"
           >
-            <li class="menu__item" @click="showMobileMenu = !showMobileMenu">
+            <li class="menu__item">
               <router-link to="/404">Downloads</router-link>
             </li>
-            <li class="menu__item" @click="showMobileMenu = !showMobileMenu">
+            <li class="menu__item">
               <router-link to="/ecosystem">Ecosystem</router-link>
             </li>
-            <li class="menu__item" @click="showMobileMenu = !showMobileMenu">
+            <li class="menu__item">
               <router-link to="/team">The Team</router-link>
             </li>
-            <li class="menu__item" @click="showMobileMenu = !showMobileMenu">
+            <li class="menu__item">
               <router-link to="/investors">Investors</router-link>
             </li>
           </ul>
@@ -98,15 +62,15 @@ export default {
   data() {
     return {
       showMobileMenu: false,
-    };
+    }
   },
   props: {
     showTransparentNavbar: {
       type: Boolean,
-      default: false,
-    },
-  },
-};
+      default: false
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -116,14 +80,7 @@ export default {
   padding-bottom: 25px;
 }
 .show-mobile-menu {
-  background-image: radial-gradient(
-    circle,
-    #e5e5e5,
-    #d4ceeb,
-    #c6b5f0,
-    #b99cf2,
-    #af82f2
-  );
+  background-image: radial-gradient(circle, #e5e5e5, #d4ceeb, #c6b5f0, #b99cf2, #af82f2);
   position: absolute;
   top: 94px;
   left: 0;
@@ -141,13 +98,11 @@ export default {
 .slide-leave-active {
   transition-duration: 0.4s;
 }
-.slide-enter-to,
-.slide-leave {
+.slide-enter-to, .slide-leave {
   max-height: 100vh;
   overflow: hidden;
 }
-.slide-enter,
-.slide-leave-to {
+.slide-enter, .slide-leave-to {
   overflow: hidden;
   max-height: 1px;
 }
@@ -167,24 +122,23 @@ export default {
   background: transparent;
 }
 .menu-white-color .menu__item a {
-  color: #f1f1f1;
+  color: #F1F1F1;
 }
 .menu-icon {
   display: none;
 }
 .header .router-link-exact-active.router-link-active {
   font-weight: 800;
-  color: #8f63d6;
+  color: #8F63D6;
 }
-.pos-fix {
+.pos-fix{
   position: fixed;
 }
-.pos-fix-nav {
+.pos-fix-nav{
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
-  background: #e5e5e5;
 }
 @media (max-width: 1600px) {
   .header-logo {
