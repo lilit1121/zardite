@@ -322,10 +322,7 @@ export default {
   margin-top: 20px;
   text-decoration: none;
 }
-.app-store,
-.google-play {
-  cursor: pointer;
-}
+
 @media (max-width: 1600px) {
   .about-block p {
     margin: 92px 100px 0;
@@ -405,6 +402,7 @@ export default {
   }
   .app-store,
   .google-play {
+    
     max-width: 150px;
   }
   .about {
@@ -435,7 +433,7 @@ export default {
   .more-info__top-block {
     margin-bottom: 26px;
   }
-  .sign-up {
+  .sign-up{
     height: 800px;
   }
   .sign-up__form {
@@ -451,8 +449,8 @@ export default {
   }
 }
 @media (max-width: 500px) {
-  .about-content {
-    padding: 0;
+  .about-content{
+    padding: 0 ;
   }
   .sign-up {
     background: #6e5cd9;
@@ -461,7 +459,7 @@ export default {
   .sign-up__form {
     top: 7%;
   }
-  .about-content .title {
+  .about-content .title{
     margin: 0;
   }
 }
