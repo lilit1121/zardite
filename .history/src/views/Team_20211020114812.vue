@@ -8,8 +8,8 @@
         to connect as many people as possible through social gaming.
       </p>
     </div>
-    <div class="team-member flex-start-center flex-md-column flex-wrap ">
-      <div class="team-member__block mb-115">
+    <div class="team-member flex-start-center flex-md-column flex-wrap mb-115">
+      <div class="team-member__block">
         <img
           src="../assets/images/team/team-member1.png"
           alt="team-member"
@@ -18,7 +18,7 @@
         <p class="team-member__name">Eugene Joseph</p>
         <span class="team-member__profession">CEO/Co-Founder</span>
       </div>
-      <div class="team-member__block mb-115">
+      <div class="team-member__block">
         <img
           src="../assets/images/team/team-member2.png"
           alt="team-member"
@@ -27,7 +27,7 @@
         <p class="team-member__name">Dimitri Miles</p>
         <span class="team-member__profession">CEO/Co-Founder</span>
       </div>
-      <div class="team-member__block mb-115">
+      <div class="team-member__block">
         <img
           src="../assets/images/team/team-member3.png"
           alt="team-member"
@@ -37,8 +37,8 @@
         <span class="team-member__profession">CSO/Cheif Strategic Officer</span>
       </div>
     </div>
-    <div class="team-member flex-start-center flex-md-column flex-wrap ">
-      <div class="team-member__block mb-115">
+    <div class="team-member flex-start-center flex-md-column flex-wrap mb-124">
+      <div class="team-member__block">
         <img
           src="../assets/images/team/team-member7.png"
           alt="team-member"
@@ -47,7 +47,7 @@
         <p class="team-member__name">Lasha Abazashvili</p>
         <span class="team-member__profession">Back-End Developer</span>
       </div>
-      <div class="team-member__block mb-115">
+      <div class="team-member__block">
         <img
           src="../assets/images/team/team-member5.png"
           alt="team-member"
@@ -58,7 +58,7 @@
           >Mobile Application Developer</span
         >
       </div>
-      <div class="team-member__block mb-115">
+      <div class="team-member__block">
         <img
           src="../assets/images/team/team-member6.png"
           alt="team-member"
@@ -67,7 +67,7 @@
         <p class="team-member__name">Opeyemi Agbeja</p>
         <span class="team-member__profession">Mobile Engineer</span>
       </div>
-      <div class="team-member__block mb-115">
+      <div class="team-member__block">
         <img
           src="../assets/images/team/team-member4.png"
           alt="team-member"
@@ -89,7 +89,7 @@
     <div class="about-team flex-start-between flex-md-column">
       <div>
         <div class="team-member">
-          <div class="team-member__block left mb-115">
+          <div class="team-member__block left">
             <img
               src="../assets/images/team/team-member1.png"
               alt="team-member"
@@ -449,7 +449,7 @@ export default {
   padding: 50px;
 }
 .img-team-user {
-  width: 275px;
+  width: 275;
   border-radius: 50%;
 }
 @media (max-width: 1500px) {

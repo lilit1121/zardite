@@ -487,9 +487,7 @@ button {
   border-radius: 50px;
   cursor: pointer;
 }
-.img-user{
-  width: 196px;
-}
+.
 @media (max-width: 1500px) {
   .item-desc {
     height: unset;

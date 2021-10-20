@@ -67,7 +67,7 @@
         <p class="team-member__name">Opeyemi Agbeja</p>
         <span class="team-member__profession">Mobile Engineer</span>
       </div>
-      <div class="team-member__block mb-115">
+      <div class="team-member__block">
         <img
           src="../assets/images/team/team-member4.png"
           alt="team-member"
@@ -89,7 +89,7 @@
     <div class="about-team flex-start-between flex-md-column">
       <div>
         <div class="team-member">
-          <div class="team-member__block left mb-115">
+          <div class="team-member__block left">
             <img
               src="../assets/images/team/team-member1.png"
               alt="team-member"

@@ -47,7 +47,7 @@
           </div>
           <h4>A word from the CEO</h4>
           <h3>Eugene Joseph</h3>
-          <div class="img-user">
+          <div class="">
             <img
               src="@/assets/images/investor/En-Jos-investor.png"
               alt="img-user"
@@ -486,9 +486,6 @@ button {
   font-size: 25px;
   border-radius: 50px;
   cursor: pointer;
-}
-.img-user{
-  width: 196px;
 }
 @media (max-width: 1500px) {
   .item-desc {
