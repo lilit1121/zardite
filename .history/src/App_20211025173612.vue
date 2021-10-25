@@ -23,7 +23,7 @@ export default {
       this.scrollYPos = window.scrollY;
       this.scrollYHeight = this.$refs.refapp.scrollHeight;
       this.changeHorizonPositionScroll(
-        (this.scrollYPos * 100) / (this.scrollYHeight - 936)
+        (this.scrollYPos * 100) / (this.scrollYHeight - )
       );
     },
   },
