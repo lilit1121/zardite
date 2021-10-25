@@ -118,6 +118,7 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "Ecosystem",
   data() {
@@ -382,6 +383,7 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(["changeHorizonPositionScroll"]),
     uniqueId() {
       return Date.now() + Math.random();
     },
@@ -415,6 +417,7 @@ export default {
 },
   created() {
     this.timerId = setInterval(this.changeImgZIndwx, 2000);
+    // window.addEventListener("scroll", this.knowScrollPosition);
   },
   destroyed() {
     clearInterval(this.timerId);

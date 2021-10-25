@@ -150,10 +150,13 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "Investors",
   data() {
     return {
+      scrollYPos: "",
+      scrollYHeight: "",
       phoneNumber: "",
       dataInvestor: [
         {

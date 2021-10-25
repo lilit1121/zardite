@@ -172,6 +172,26 @@
 <script>
 export default {
   name: "home",
+  data() {
+    return {
+      scrollYPos: "",
+      scrollYHeight: "",
+    };
+  },
+  // methods: {
+  //   ...mapMutations(["changeHorizonPositionScroll"]),
+  //   knowScrollPosition() {
+  //     this.scrollYPos = window.scrollY;
+  //     this.scrollYHeight = this.$refs.refHome.scrollHeight;
+  //     console.log(this.scrollYPos-this.scrollYHeight);
+  //     this.changeHorizonPositionScroll(
+  //       (this.scrollYPos * 100) / (this.scrollYHeight - 623)
+  //     );
+  //   },
+  // },
+  // created() {
+  //   window.addEventListener("scroll", this.knowScrollPosition);
+  // },
 };
 </script>
 <style scoped>

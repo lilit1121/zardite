@@ -318,6 +318,25 @@
 <script>
 export default {
   name: "Team",
+  data() {
+    return {
+      // scrollYPos: "",
+      // scrollYHeight: "",
+    };
+  },
+  // methods: {
+  //   ...mapMutations(["changeHorizonPositionScroll"]),
+  //   knowScrollPosition() {
+  //     this.scrollYPos = window.scrollY;
+  //     this.scrollYHeight = this.$refs.refTeam.scrollHeight;
+  //     this.changeHorizonPositionScroll(
+  //       (this.scrollYPos * 100) / (this.scrollYHeight)
+  //     );
+  //   },
+  // },
+  // created() {
+  //   window.addEventListener("scroll", this.knowScrollPosition);
+  // },
 };
 </script>
 

@@ -150,10 +150,13 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "Investors",
   data() {
     return {
+      scrollYPos: "",
+      scrollYHeight: "",
       phoneNumber: "",
       dataInvestor: [
         {
@@ -190,6 +193,7 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(["changeHorizonPositionScroll"]),
     generatorPhoneNumber() {
       var x = this.phoneNumber
         .replace(/\D/g, "")
@@ -198,7 +202,10 @@ export default {
         ? x[1]
         : x[1] + "-" + x[2] + (x[3] ? "-" + x[3] : "");
     },
-  },
+      },
+  // created() {
+  //       window.addEventListener("scroll", this.knowScrollPosition);
+  // },
 };
 </script>
 

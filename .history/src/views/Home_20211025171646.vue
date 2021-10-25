@@ -172,6 +172,12 @@
 <script>
 export default {
   name: "home",
+  data() {
+    return {
+      scrollYPos: "",
+      scrollYHeight: "",
+    };
+  },
 };
 </script>
 <style scoped>
