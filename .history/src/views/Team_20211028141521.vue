@@ -230,7 +230,7 @@ export default {
   width: 90%;
   margin: 0 auto;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: ce;
   align-items: center;
 }
 .team-info {
@@ -336,7 +336,15 @@ export default {
   font-size: 20px;
   line-height: 32px;
   color: #422a69;
-  }
+  /* background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px 33.15px 47.6px -30.6px rgba(255, 255, 255, 0.5),
+    inset 0px 5.95px 9.35px -3.4px #ffffff,
+    inset 0px -69.7px 57.8px -54.4px rgba(96, 68, 145, 0.3),
+    inset 0px 83.3px 85px -40.8px rgba(202, 172, 255, 0.3),
+    inset 0px 3.4px 15.3px rgba(154, 146, 210, 0.3),
+    inset 0px 0.85px 34px rgba(227, 222, 255, 0.2);
+  border-radius: 102px; */
+}
 .about-team .right-block {
   max-width: 410px;
   position: relative;

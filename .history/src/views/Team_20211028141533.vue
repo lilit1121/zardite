@@ -230,7 +230,7 @@ export default {
   width: 90%;
   margin: 0 auto;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: ce;
   align-items: center;
 }
 .team-info {
