@@ -628,7 +628,6 @@ button {
 /*  */
 .wrap-droplet {
   background: url("../assets/images/investor/background-investor.png");
-  background-color: #462A82;
   position: relative;
   width: 100%;
   /* clip-path: polygon(0 0, 100% 0, 100% 53%, 0 75%); */

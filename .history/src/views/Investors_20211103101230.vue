@@ -628,13 +628,14 @@ button {
 /*  */
 .wrap-droplet {
   background: url("../assets/images/investor/background-investor.png");
-  background-color: #462A82;
   position: relative;
   width: 100%;
   /* clip-path: polygon(0 0, 100% 0, 100% 53%, 0 75%); */
 }
 .blob {
   position: absolute;
+  /* top: 0;
+  left: 0; */
   fill: #7047e2;
   width: 280px;
   z-index: 1;
@@ -678,8 +679,10 @@ button {
   margin: 150px;
   width: 100px;
   animation: move-droplet 10s ease-in-out infinite;
-  transform-origin: 100% 100%;
+  /* transform-origin: 100% 100%; */
   z-index: 1;
+  /* top: 0;
+  left: 0; */
 }
 @keyframes move-droplet {
   0% {
@@ -712,6 +715,7 @@ button {
 }
 .diamondMo {
   position: absolute;
+  /* background: #6036f1; */
   width: 200px;
   height: 200px;
   animation: move-diamondMo 12s ease-in-out infinite;
